@@ -1,0 +1,16 @@
+{
+  "name": "music-scalechord-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+   
+    "test": "node --experimental-vm-modules node_modules/.bin/jest"
+  },
+  "author": "kurniadikevin <kurniadikevin@gmail.com> (http://example.com/)",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.4.1"
+  }
+}

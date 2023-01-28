@@ -22,7 +22,7 @@ const chord = function (roots,type){
   }
     
   let arrResult = [notes[rootIndex],notes[thirdIndex],notes[fifthIndex]]
-    return arrResult;
+    return arrResult.join(' ');
   }
 
   //minor
@@ -33,23 +33,13 @@ const chord = function (roots,type){
       
     //third index
     let thirdIndex;
-    //octave note
-    if(rootIndex+4 > 11){
-      thirdIndex = notes[(rootIndex + 4) - notes.length];
-
-      // third node sharp on mayor
-      if(thirdIndex.length===2){
-        thirdIndex = notes[(rootIndex + 3) - notes.length];
-      }
-
-    } 
-
-    //non-octave
-    else{
-      thirdIndex= notes[rootIndex+4] + 'b';// third node natural note
+    if((rootIndex+3) > 11){
+     thirdIndex = notes[(rootIndex + 3) - notes.length];
+    } else{
+     thirdIndex= notes[rootIndex+3];
     }
 
-    const naturalThirdIndex= function(item){
+  /*   const naturalThirdIndex= function(item){
         if(item ==='Fb'){
             return 'E';
         } else if( item === 'Cb'){
@@ -62,7 +52,7 @@ const chord = function (roots,type){
             return item;
         }
 
-    }
+    } */
 
     //fifth index
     let fifthIndex;
@@ -72,16 +62,16 @@ const chord = function (roots,type){
       fifthIndex= rootIndex+7;
     }
 
-    let arrResult = [notes[rootIndex],naturalThirdIndex(thirdIndex) ,notes[fifthIndex]]
-      return arrResult;
+    let arrResult = [notes[rootIndex],thirdIndex ,notes[fifthIndex]]
+      return arrResult.join(' ');
   }
 }
 
-console.log(
-chord('c','mayor')
-  );
+ /* console.log(
+chord('g#','mayor')
+  );  */
+ 
 
-
-
+export {chord};
 
 
