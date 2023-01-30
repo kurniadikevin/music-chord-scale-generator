@@ -2,7 +2,6 @@ import {chord} from '../script';
 
 test('Returns chord mayor sharp system correctly', function () {
 
-	
 	expect(chord('c','mayor')).toBe( 'C E G'
     );
     expect(chord('c#','mayor')).toBe( 'C# F G#'
@@ -86,9 +85,8 @@ test('Returns chord mayor7 sharp system correctly', function () {
     );
 });
 
-test('Returns chord minor7 sharp system correctly', function () {
+test('Returns chord minor7, sharp system correctly', function () {
 
-	
 	expect(chord('c','minor7')).toBe( 'C D# G A#'
     );
     expect(chord('c#','minor7')).toBe( 'C# E G# B'
@@ -140,5 +138,146 @@ test('Returns chord dominant7 sharp system correctly', function () {
     expect(chord('a#','dom7')).toBe( 'A# D F G#'
     );
     expect(chord('b','dom7')).toBe( 'B D# F# A'
+    );
+});
+
+test('Returns chord augmented, sharp system correctly', function () {
+
+	expect(chord('c','aug')).toBe( 'C E G#'
+    );
+    expect(chord('c#','aug')).toBe( 'C# F A'
+    );
+    expect(chord('d','aug')).toBe( 'D F# A#'
+    );
+    expect(chord('d#','aug')).toBe( 'D# G B'
+    );
+    expect(chord('e','aug')).toBe( 'E G# C'
+    );
+    expect(chord('f','aug')).toBe( 'F A C#'
+    );
+    expect(chord('f#','aug')).toBe( 'F# A# D'
+    );
+    expect(chord('g','aug')).toBe( 'G B D#'
+    );
+    expect(chord('g#','aug')).toBe( 'G# C E'
+    );
+    expect(chord('a','aug')).toBe( 'A C# F'
+    );
+    expect(chord('a#','aug')).toBe( 'A# D F#'
+    );
+    expect(chord('b','aug')).toBe( 'B D# G'
+    );
+});
+
+test('Returns chord diminished, sharp system correctly', function () {
+
+	expect(chord('c','dim')).toBe( 'C E F#'
+    );
+    expect(chord('c#','dim')).toBe( 'C# F G'
+    );
+    expect(chord('d','dim')).toBe( 'D F# G#'
+    );
+    expect(chord('d#','dim')).toBe( 'D# G A'
+    );
+    expect(chord('e','dim')).toBe( 'E G# A#'
+    );
+    expect(chord('f','dim')).toBe( 'F A B'
+    );
+    expect(chord('f#','dim')).toBe( 'F# A# C'
+    );
+    expect(chord('g','dim')).toBe( 'G B C#'
+    );
+    expect(chord('g#','dim')).toBe( 'G# C D'
+    );
+    expect(chord('a','dim')).toBe( 'A C# D#'
+    );
+    expect(chord('a#','dim')).toBe( 'A# D E'
+    );
+    expect(chord('b','dim')).toBe( 'B D# F'
+    );
+});
+
+
+test('Returns chord halfDim7, sharp system correctly', function () {
+
+	expect(chord('c','halfDim7')).toBe( 'C D# F# A#'
+    );
+    expect(chord('c#','halfDim7')).toBe( 'C# E G B'
+    );
+    expect(chord('d','halfDim7')).toBe( 'D F G# C'
+    );
+     expect(chord('d#','halfDim7')).toBe( 'D# F# A C#'
+    ); 
+    expect(chord('e','halfDim7')).toBe( 'E G A# D'
+    );
+    expect(chord('f','halfDim7')).toBe( 'F G# B D#'
+    );
+    expect(chord('f#','halfDim7')).toBe( 'F# A C E'
+    );
+    expect(chord('g','halfDim7')).toBe( 'G A# C# F'
+    );
+      expect(chord('g#','halfDim7')).toBe( 'G# B D F#'
+    );  
+    expect(chord('a','halfDim7')).toBe( 'A C D# G'
+    );
+      expect(chord('a#','halfDim7')).toBe( 'A# C# E G#'
+    );  
+    expect(chord('b','halfDim7')).toBe( 'B D F A'
+    );
+});
+
+test('Returns chord dim7, sharp system correctly', function () {
+
+	expect(chord('c','dim7')).toBe( 'C D# F# A'
+    );
+    expect(chord('c#','dim7')).toBe( 'C# E G A#'
+    );
+    expect(chord('d','dim7')).toBe( 'D F G# B'
+    );
+     expect(chord('d#','dim7')).toBe( 'D# F# A C'
+    ); 
+    expect(chord('e','dim7')).toBe( 'E G A# C#'
+    );
+    expect(chord('f','dim7')).toBe( 'F G# B D'
+    );
+    expect(chord('f#','dim7')).toBe( 'F# A C D#'
+    );
+    expect(chord('g','dim7')).toBe( 'G A# C# E'
+    );
+      expect(chord('g#','dim7')).toBe( 'G# B D F'
+    );  
+    expect(chord('a','dim7')).toBe( 'A C D# F#'
+    );
+      expect(chord('a#','dim7')).toBe( 'A# C# E G'
+    );  
+    expect(chord('b','dim7')).toBe( 'B D F G#'
+    );
+});
+
+test('Returns chord aug7 ,sharp system correctly', function () {
+
+	expect(chord('c','aug7')).toBe( 'C E G# A#'
+    );
+    expect(chord('c#','aug7')).toBe( 'C# F A B'
+    );
+    expect(chord('d','aug7')).toBe( 'D F# A# C'
+    );
+    expect(chord('d#','aug7')).toBe( 'D# G B C#'
+    );
+    expect(chord('e','aug7')).toBe( 'E G# C D'
+    );
+    expect(chord('f','aug7')).toBe( 'F A C# D#'
+    );
+    expect(chord('f#','aug7')).toBe( 'F# A# D E'
+    );
+    expect(chord('g','aug7')).toBe( 'G B D# F'
+    );
+    expect(chord('g#','aug7')).toBe( 'G# C E F#'
+    );
+    expect(chord('a','aug7')).toBe( 'A C# F G'
+    );
+    expect(chord('a#','aug7')).toBe( 'A# D F# G#'
+    );
+    expect(chord('b','aug7')).toBe( 'B D# G A'
     );
 });
