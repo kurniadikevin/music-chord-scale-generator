@@ -281,3 +281,94 @@ test('Returns chord aug7 ,sharp system correctly', function () {
     expect(chord('b','aug7')).toBe( 'B D# G A'
     );
 });
+
+test('Returns chord mayor9 ,sharp system correctly', function () {
+
+	expect(chord('c','mayor9')).toBe( 'C E G B D'
+    );
+    expect(chord('C#','mayor9')).toBe( 'C# F G# C D#'
+    );
+    expect(chord('F','mayor9')).toBe( 'F A C E G'
+    );
+});
+
+test('Returns chord minor9 ,sharp system correctly', function () {
+
+	expect(chord('c','minor9')).toBe( 'C D# G A# D'
+    );
+    expect(chord('C#','minor9')).toBe( 'C# E G# B D#'
+    );
+    expect(chord('F','minor9')).toBe( 'F G# C D# G'
+    );  
+});
+
+test('Returns chord mayor11 ,sharp system correctly', function () {
+
+	expect(chord('c','mayor11')).toBe( 'C E G B D F'
+    );
+    expect(chord('C#','mayor11')).toBe( 'C# F G# C D# F#'
+    );
+    expect(chord('F','mayor11')).toBe( 'F A C E G A#'
+    );
+});
+
+test('Returns chord minor11 ,sharp system correctly', function () {
+
+	expect(chord('c','minor11')).toBe( 'C D# G A# D F'
+    );
+    expect(chord('C#','minor11')).toBe( 'C# E G# B D# F#'
+    );
+    expect(chord('F','minor11')).toBe( 'F G# C D# G A#'
+    );  
+});
+
+test('Returns chord mayor13 ,sharp system correctly', function () {
+
+	expect(chord('c','mayor13')).toBe( 'C E G B D F A'
+    );
+    expect(chord('C#','mayor13')).toBe( 'C# F G# C D# F# A#'
+    );
+    expect(chord('F','mayor13')).toBe( 'F A C E G A# D'
+    );
+});
+
+test('Returns chord minor13 ,sharp system correctly', function () {
+
+	expect(chord('c','minor13')).toBe( 'C D# G A# D F A'
+    );
+    expect(chord('C#','minor13')).toBe( 'C# E G# B D# F# A#'
+    );
+    expect(chord('F','minor13')).toBe( 'F G# C D# G A# D'
+    );  
+});
+
+
+test('Returns chord dom9 ,sharp system correctly', function () {
+
+	expect(chord('c','dom9')).toBe( 'C E G A# D'
+    );
+    expect(chord('C#','dom9')).toBe( 'C# F G# B D#'
+    );
+    expect(chord('F','dom9')).toBe( 'F A C D# G'
+    );
+});
+
+test('Returns chord dom11 ,sharp system correctly', function () {
+
+	expect(chord('c','dom11')).toBe( 'C E G A# D F'
+    );
+    expect(chord('C#','dom11')).toBe( 'C# F G# B D# F#'
+    );
+    expect(chord('F','dom11')).toBe( 'F A C D# G A#'
+    );
+});
+
+test('Returns chord dom13 ,sharp system correctly', function () {
+
+	expect(chord('c','dom13')).toBe( 'C E G A# D F A'
+    );
+    expect(chord('C#','dom13')).toBe( 'C# F G# B D# F# A#'
+    );
+    expect(chord('F','dom13')).toBe( 'F A C D# G A# D'
+    );
+});

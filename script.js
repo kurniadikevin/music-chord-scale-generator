@@ -279,7 +279,7 @@ const chord = function (roots,type){
     
     //mayor
     let thirdIndex;
-        if((rootIndex+4) > 11){
+      if((rootIndex+4) > 11){
       thirdIndex = (rootIndex + 4) - notes.length;
     } else{
       thirdIndex= rootIndex+4;
@@ -304,19 +304,163 @@ const chord = function (roots,type){
     let arrResult = [notes[rootIndex],notes[thirdIndex],notes[fifthIndex],notes[seventhIndex]];
       return arrResult.join(' ');
     }
+
+    //MAYOR9
+    else if(type==='mayor9'){
+
+      //9th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+2) > 11){
+        extentionIndex = (rootIndex + 2) - notes.length;
+      } else{
+        extentionIndex = rootIndex+2;
+      }
+
+     return chord(roots,'mayor7')+' '+ notes[extentionIndex];
+    }
+
+    //MINOR9
+    else if(type==='minor9'){
+
+      //9th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+2) > 11){
+        extentionIndex = (rootIndex + 2) - notes.length;
+      } else{
+        extentionIndex = rootIndex+2;
+      }
+
+     return chord(roots,'minor7')+' '+ notes[extentionIndex];
+    }
+
+    //DOMINANT9
+    else if(type==='dom9'){
+
+      //9th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+2) > 11){
+        extentionIndex = (rootIndex + 2) - notes.length;
+      } else{
+        extentionIndex = rootIndex+2;
+      }
+
+     return chord(roots,'dom7')+' '+ notes[extentionIndex];
+    }
+
+  //MAYOR11
+        else if(type==='mayor11'){
+
+          //11th note
+          let root = roots.toUpperCase();
+          let rootIndex= notes.indexOf(root);
+          let extentionIndex;
+          if((rootIndex+5) > 11){
+            extentionIndex = (rootIndex + 5) - notes.length;
+          } else{
+            extentionIndex = rootIndex+5;
+          }
+    
+         return chord(roots,'mayor9')+' '+ notes[extentionIndex];
+        }
+    
+  //MINOR11
+        else if(type==='minor11'){
+    
+          //11th note
+          let root = roots.toUpperCase();
+          let rootIndex= notes.indexOf(root);
+          let extentionIndex;
+          if((rootIndex+5) > 11){
+            extentionIndex = (rootIndex + 5) - notes.length;
+          } else{
+            extentionIndex = rootIndex+5;
+          }
+    
+         return chord(roots,'minor9')+' '+ notes[extentionIndex];
+        }
+
+    //DOMINANT11
+    else if(type==='dom11'){
+
+      //9th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+5) > 11){
+        extentionIndex = (rootIndex + 5) - notes.length;
+      } else{
+        extentionIndex = rootIndex+5;
+      }
+
+     return chord(roots,'dom9')+' '+ notes[extentionIndex];
+    }
+
+   //MAYOR13
+     else if(type==='mayor13'){
+
+      //13th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+9) > 11){
+        extentionIndex = (rootIndex + 9) - notes.length;
+      } else{
+        extentionIndex = rootIndex+9;
+      }
+
+     return chord(roots,'mayor11')+' '+ notes[extentionIndex];
+    }
+
+//MINOR13
+    else if(type==='minor13'){
+
+      //13th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+9) > 11){
+        extentionIndex = (rootIndex + 9) - notes.length;
+      } else{
+        extentionIndex = rootIndex+9;
+      }
+
+     return chord(roots,'minor11')+' '+ notes[extentionIndex];
+    }
+
+     //DOMINANT13
+     else if(type==='dom13'){
+
+      //9th note
+      let root = roots.toUpperCase();
+      let rootIndex= notes.indexOf(root);
+      let extentionIndex;
+      if((rootIndex+9) > 11){
+        extentionIndex = (rootIndex + 9) - notes.length;
+      } else{
+        extentionIndex = rootIndex+9;
+      }
+
+     return chord(roots,'dom11')+' '+ notes[extentionIndex];
+    }
 }
 
 
 
 
 
-/* 
-   console.log(
-chord('c#','mayor7')
-  );  
+
+/*     console.log(
+chord('A#','minor')
+  ); 
    */
 
-export {chord};
+ export {chord}; 
 
 //naturalized some third exp: C minor = C Eb G not C D# G
 
