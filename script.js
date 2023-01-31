@@ -1,13 +1,14 @@
-const notes =['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+//sharp system
+//const notes =['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
 
-//substitution
-const notesX =['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+//sharp and flat system
+const notes =['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
 
 const chord = function (roots,type){
 
   //MAYOR
   if(type ==='mayor'){
-  let root = roots.toUpperCase();  
+  let root = roots.charAt(0).toUpperCase() + roots.slice(1);  
   let rootIndex= notes.indexOf(root);
   
   //third mayor
@@ -31,7 +32,7 @@ const chord = function (roots,type){
 
   //MINOR
   else if(type === 'minor'){
-    let root = roots.toUpperCase();
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1);
     
     let rootIndex= notes.indexOf(root);
       
@@ -57,7 +58,7 @@ const chord = function (roots,type){
 
   //MAYOR7
   else if(type === 'mayor7'){
-    let root = roots.toUpperCase(); 
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1); 
     let rootIndex= notes.indexOf(root);
       
     //third mayor
@@ -89,7 +90,7 @@ const chord = function (roots,type){
 
     //MINOR7
     else if(type === 'minor7'){
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       
       let rootIndex= notes.indexOf(root);
         
@@ -123,7 +124,7 @@ const chord = function (roots,type){
 
     //DOMINANT7
   else if(type === 'dom7'){
-    let root = roots.toUpperCase(); 
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1); 
     let rootIndex= notes.indexOf(root);
     
     //mayor
@@ -154,7 +155,7 @@ const chord = function (roots,type){
 
   //DIMINISHED TRIAD
   else if(type === 'dim'){
-    let root = roots.toUpperCase();
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1);
     
     let rootIndex= notes.indexOf(root);
       
@@ -180,7 +181,7 @@ const chord = function (roots,type){
 
   //AUGMENTED TRIAD
   else if(type === 'aug'){
-    let root = roots.toUpperCase();
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1);
     
     let rootIndex= notes.indexOf(root);
       
@@ -206,7 +207,7 @@ const chord = function (roots,type){
 
   //HALF-DIMINISHED7
   else if(type === 'halfDim7'){
-    let root = roots.toUpperCase();
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1);
     
     let rootIndex= notes.indexOf(root);
       
@@ -240,7 +241,7 @@ const chord = function (roots,type){
 
   //DIMINISHED7
    else if(type === 'dim7'){
-    let root = roots.toUpperCase();
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1);
     
     let rootIndex= notes.indexOf(root);
       
@@ -274,7 +275,7 @@ const chord = function (roots,type){
 
   //AUGMENTED7
   else if(type === 'aug7'){
-    let root = roots.toUpperCase(); 
+    let root = roots.charAt(0).toUpperCase() + roots.slice(1); 
     let rootIndex= notes.indexOf(root);
     
     //mayor
@@ -309,7 +310,7 @@ const chord = function (roots,type){
     else if(type==='mayor9'){
 
       //9th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+2) > 11){
@@ -325,7 +326,7 @@ const chord = function (roots,type){
     else if(type==='minor9'){
 
       //9th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+2) > 11){
@@ -341,7 +342,7 @@ const chord = function (roots,type){
     else if(type==='dom9'){
 
       //9th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+2) > 11){
@@ -357,7 +358,7 @@ const chord = function (roots,type){
         else if(type==='mayor11'){
 
           //11th note
-          let root = roots.toUpperCase();
+          let root = roots.charAt(0).toUpperCase() + roots.slice(1);
           let rootIndex= notes.indexOf(root);
           let extentionIndex;
           if((rootIndex+5) > 11){
@@ -373,7 +374,7 @@ const chord = function (roots,type){
         else if(type==='minor11'){
     
           //11th note
-          let root = roots.toUpperCase();
+          let root = roots.charAt(0).toUpperCase() + roots.slice(1);
           let rootIndex= notes.indexOf(root);
           let extentionIndex;
           if((rootIndex+5) > 11){
@@ -389,7 +390,7 @@ const chord = function (roots,type){
     else if(type==='dom11'){
 
       //9th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+5) > 11){
@@ -405,7 +406,7 @@ const chord = function (roots,type){
      else if(type==='mayor13'){
 
       //13th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+9) > 11){
@@ -421,7 +422,7 @@ const chord = function (roots,type){
     else if(type==='minor13'){
 
       //13th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+9) > 11){
@@ -437,7 +438,7 @@ const chord = function (roots,type){
      else if(type==='dom13'){
 
       //9th note
-      let root = roots.toUpperCase();
+      let root = roots.charAt(0).toUpperCase() + roots.slice(1);
       let rootIndex= notes.indexOf(root);
       let extentionIndex;
       if((rootIndex+9) > 11){

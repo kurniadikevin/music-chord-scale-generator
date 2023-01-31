@@ -1,5 +1,6 @@
 import {chord} from '../script';
 
+/*
 test('Returns chord mayor sharp system correctly', function () {
 
 	expect(chord('c','mayor')).toBe( 'C E G'
@@ -370,5 +371,39 @@ test('Returns chord dom13 ,sharp system correctly', function () {
     expect(chord('C#','dom13')).toBe( 'C# F G# B D# F# A#'
     );
     expect(chord('F','dom13')).toBe( 'F A C D# G A# D'
+    );
+}); */
+
+
+/* SHARP AND FLAT SYSTEM TEST ---------*/
+test('Returns chord dom13 ,mixed system correctly', function () {
+
+	expect(chord('c','dom13')).toBe( 'C E G Bb D F A'
+    );
+    expect(chord('C#','dom13')).toBe( 'C# F Ab B Eb F# Bb'
+    );
+    expect(chord('F','dom13')).toBe( 'F A C Eb G Bb D'
+    );
+});
+
+test('Returns chord minor13 ,mixed system correctly', function () {
+
+	expect(chord('c','minor13')).toBe( 'C Eb G Bb D F A'
+    );
+    expect(chord('C#','minor13')).toBe( 'C# E Ab B Eb F# Bb'
+    );
+    expect(chord('F','minor13')).toBe( 'F Ab C Eb G Bb D'
+    );  
+});
+
+test('Returns chord mayor13 ,mixed system correctly', function () {
+
+	expect(chord('c','mayor13')).toBe( 'C E G B D F A'
+    );
+    expect(chord('C#','mayor13')).toBe( 'C# F Ab C Eb F# Bb'
+    );
+    expect(chord('F','mayor13')).toBe( 'F A C E G Bb D'
+    );
+    expect(chord('d','mayor13')).toBe( 'D F# A C# E G B'
     );
 });
