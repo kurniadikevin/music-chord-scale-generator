@@ -453,9 +453,6 @@ const chord = function (roots,type){
 
 
 
-
-
-
 /*     console.log(
 chord('A#','minor')
   ); 

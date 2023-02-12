@@ -1,4 +1,4 @@
-import {chord} from '../script';
+import {chord} from '../chord';
 
 /*
 test('Returns chord mayor sharp system correctly', function () {
