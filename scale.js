@@ -6,9 +6,21 @@ const scale= function(roots,type){
     if(type === 'Mayor'){
         let mayorInterval=[ 0, 2, 4, 5, 7, 9, 11];
         return  scaleIntervalInput(roots,mayorInterval)
-    } else if( type === 'Minor'){
+    } else if( type === 'Minor(Natural)'){
         let minorInterval =[ 0, 2, 3, 5, 7, 8, 10];
         return scaleIntervalInput(roots, minorInterval);
+    } else if( type === 'Harmonic-Minor'){
+        let minorInterval =[ 0, 2, 3, 5, 7, 8, 11];
+        return scaleIntervalInput(roots, minorInterval);
+    } else if( type === 'Melodic-Minor'){
+        let minorInterval =[ 0, 2, 3, 5, 7, 9, 11, 12, 10, 8, 7, 5, 3, 2, 0];
+        return scaleIntervalInput(roots, minorInterval);
+    } else if (type === 'Pentatonic-Mayor'){
+        let pentatonicMayorInterval =[ 0, 2, 4, 7, 9];
+        return scaleIntervalInput(roots, pentatonicMayorInterval);
+    } else if (type == 'Pentatonic-Minor'){
+        let pentatonicMinorInterval = [ 0,3,5,7,10];
+        return scaleIntervalInput(roots,pentatonicMinorInterval);
     }
 
 }
