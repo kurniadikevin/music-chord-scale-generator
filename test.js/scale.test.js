@@ -53,3 +53,24 @@ test('Testing Melodic Minor scale on mix system correctly',function(){
     ); 
    
 })
+
+/* ------------------------------------------------------------------------ */
+
+//whole tone scale testing
+test('Testing Whole Tone Scale on mix system',function(){
+    expect(scale('c','Whole-Tone')).toBe('C D E F# Ab Bb');
+    expect(scale('c#','Whole-Tone')).toBe('C# Eb F G A B');
+})
+
+//augmented scale testing
+test('Testing Augmented Scale on mix system',function(){
+    expect(scale('c','Augmented')).toBe('C Eb E G Ab B');
+    expect(scale('c#','Augmented')).toBe('C# E F Ab A C');
+})
+
+//diminished scale testing
+test('Testing Diminished Scale on mix system',function(){
+    expect(scale('c','Diminished')).toBe('C D Eb F F# Ab A B');
+    expect(scale('c#','Diminished')).toBe('C# Eb E F# G A Bb C');
+    expect(scale('Eb','Diminished')).toBe('Eb F F# Ab A B C D');
+})

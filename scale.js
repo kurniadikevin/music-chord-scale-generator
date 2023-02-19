@@ -18,9 +18,18 @@ const scale= function(roots,type){
     } else if (type === 'Pentatonic-Mayor'){
         let pentatonicMayorInterval =[ 0, 2, 4, 7, 9];
         return scaleIntervalInput(roots, pentatonicMayorInterval);
-    } else if (type == 'Pentatonic-Minor'){
+    } else if (type === 'Pentatonic-Minor'){
         let pentatonicMinorInterval = [ 0,3,5,7,10];
         return scaleIntervalInput(roots,pentatonicMinorInterval);
+    } else if (type === 'Whole-Tone'){
+        let wholeToneInterval = [0,2,4,6,8,10];
+        return scaleIntervalInput(roots,wholeToneInterval);
+    } else if (type === 'Augmented'){
+        let augmentedInterval = [0, 3, 4, 7, 8, 11];
+        return scaleIntervalInput(roots,augmentedInterval);
+    } else if (type === 'Diminished'){
+        let diminishedInterval = [0,2,3,5,6,8,9,11];
+        return scaleIntervalInput(roots,diminishedInterval);
     }
 
 }
